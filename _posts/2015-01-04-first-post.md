@@ -1,8 +1,8 @@
----
+ï»¿---
 layout: post
 title: First post!
 image: /img/hello_world.jpeg
 tags: [random, exciting-stuff]
 ---
 
-²âÊÔÒ»ÏÂÄÚÈİ
+æµ‹è¯•ä¸€ä¸‹å†…å®¹
