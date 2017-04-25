@@ -66,4 +66,3 @@ if ('speechSynthesis' in window){
 }
 ~~~
 对于不支持的浏览器，可以用html5新加入的audio标签，如果浏览器版本比较低，那就只能用flash实现了。
-
