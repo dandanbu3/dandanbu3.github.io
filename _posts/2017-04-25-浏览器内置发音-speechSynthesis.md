@@ -1,7 +1,6 @@
-﻿---
+﻿--- 
 layout: post
 title: 浏览器内置语音发音对象speechSynthesis
-subtitle: Each post also has a subtitle
 ---
 
 ### 浏览器内置发音speechSynthesis
