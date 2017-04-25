@@ -1,4 +1,4 @@
-ï»¿---
+---
 layout: post
 title: Flake it till you make it
 subtitle: Excerpt from Soulshaping by Jeff Brown
@@ -6,19 +6,19 @@ bigimg: /img/path.jpg
 ---
 
 
-å› ä¸ºæœ€è¿‘åšäº†ä¸€ä¸ªæŒ‡å¼•åŠŸèƒ½ï¼Œç„¶åå‘ç°ä¸€ä¸ªæ¯”è¾ƒæœ‰æ„æ€çš„ä¸œè¥¿ï¼Œä»¥ç›´æ¥é€šè¿‡jsè°ƒç”¨æµè§ˆå™¨å†…ç½®çš„speechSynthesisçš„å¯¹è±¡å®ç°è¯­éŸ³è¾“å‡ºï¼Œè€Œä¸ç”¨ä¾èµ–å…¶ä»–çš„éŸ³é¢‘æ–‡ä»¶ã€‚
+ÒòÎª×î½ü×öÁËÒ»¸öÖ¸Òı¹¦ÄÜ£¬È»ºó·¢ÏÖÒ»¸ö±È½ÏÓĞÒâË¼µÄ¶«Î÷£¬ÒÔÖ±½ÓÍ¨¹ıjsµ÷ÓÃä¯ÀÀÆ÷ÄÚÖÃµÄspeechSynthesisµÄ¶ÔÏóÊµÏÖÓïÒôÊä³ö£¬¶ø²»ÓÃÒÀÀµÆäËûµÄÒôÆµÎÄ¼ş¡£
 
 ~~~
 var words = new SpeechSynthesisUtterance('Hello captain');
 window.speechSynthesis.speak(words);
 ~~~
-é€šè¿‡æ–°å»ºä¸€ä¸ªSpeechSynthesisUtteranceå¯¹è±¡ï¼Œå†è°ƒç”¨speechSynthesisæ–¹æ³•ï¼Œå®ç°è¯­éŸ³è¾“å‡ºSpeechSynthesisUtteranceå¯¹è±¡å†…å®¹ã€‚æˆ‘åœ¨firefoxå’Œchromeæµè§ˆå™¨ä¸‹å‘ç°æ˜¯æœ‰speechSynthesiså¯¹è±¡çš„ï¼Œä½†æ˜¯IEæš‚ä¸æ”¯æŒã€‚é€šè¿‡ä¿®æ”¹SpeechSynthesisUtteranceå¯¹è±¡ä¸­çš„å±æ€§ï¼Œå¯ä»¥ä¿®æ”¹è¯­éŸ³çš„å£°éŸ³ã€å‘éŸ³é€Ÿåº¦ï¼Œå£°è°ƒã€è¯­è¨€ç­‰ã€‚
+Í¨¹ıĞÂ½¨Ò»¸öSpeechSynthesisUtterance¶ÔÏó£¬ÔÙµ÷ÓÃspeechSynthesis·½·¨£¬ÊµÏÖÓïÒôÊä³öSpeechSynthesisUtterance¶ÔÏóÄÚÈİ¡£ÎÒÔÚfirefoxºÍchromeä¯ÀÀÆ÷ÏÂ·¢ÏÖÊÇÓĞspeechSynthesis¶ÔÏóµÄ£¬µ«ÊÇIEÔİ²»Ö§³Ö¡£Í¨¹ıĞŞ¸ÄSpeechSynthesisUtterance¶ÔÏóÖĞµÄÊôĞÔ£¬¿ÉÒÔĞŞ¸ÄÓïÒôµÄÉùÒô¡¢·¢ÒôËÙ¶È£¬Éùµ÷¡¢ÓïÑÔµÈ¡£
 
-|volume|å£°éŸ³|
-|rate|å‘éŸ³é€Ÿåº¦|
-|pitch|éŸ³è°ƒ|
-|voice|å£°éŸ³|
-|language|[è¯­è¨€en,zh](http://www.mathguide.de/info/tools/languagecode.html)|
+|volume|ÉùÒô|
+|rate|·¢ÒôËÙ¶È|
+|pitch|Òôµ÷|
+|voice|ÉùÒô|
+|language|[ÓïÑÔen,zh](http://www.mathguide.de/info/tools/languagecode.html)|
 
 
 ~~~
@@ -38,7 +38,7 @@ msg.onend = function(e) {
 
 speechSynthesis.speak(msg);
 ~~~
-#### å‘éŸ³åˆ—è¡¨
+#### ·¢ÒôÁĞ±í
 
 ~~~
 speechSynthesis.getVoices().forEach(function(voice) {
@@ -46,24 +46,24 @@ speechSynthesis.getVoices().forEach(function(voice) {
 });
 
 ~~~
-speechSynthesis.getVoices()å¯ä»¥å¾—åˆ°å¯ç”¨è¯­è¨€å‘éŸ³æ•°ç»„ï¼ŒforEachæ–¹æ³•å¯¹æ•°ç»„æ¯ä¸€é¡¹è¿›è¡Œè¿­ä»£ã€‚
-å¯ä»¥å¾—åˆ°ä¸€ä¸ªåˆ—è¡¨ã€‚
+speechSynthesis.getVoices()¿ÉÒÔµÃµ½¿ÉÓÃÓïÑÔ·¢ÒôÊı×é£¬forEach·½·¨¶ÔÊı×éÃ¿Ò»Ïî½øĞĞµü´ú¡£
+¿ÉÒÔµÃµ½Ò»¸öÁĞ±í¡£
 
 ![grep](/img/chromeSpeech.png)
 
-çŸ¥é“è¿™ä¸ªåˆ—è¡¨æˆ‘ä»¬å°±èƒ½ç”¨æŒ‡å®šè¯­è¨€è¯»å–å†…å®¹äº†
+ÖªµÀÕâ¸öÁĞ±íÎÒÃÇ¾ÍÄÜÓÃÖ¸¶¨ÓïÑÔ¶ÁÈ¡ÄÚÈİÁË
 
 ~~~
-var msg = new SpeechSynthesisUtterance('ä½ å¥½');
-msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google æ™®é€šè¯ï¼ˆä¸­å›½å¤§é™†ï¼‰'; })[0];
+var msg = new SpeechSynthesisUtterance('ÄãºÃ');
+msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google ÆÕÍ¨»°£¨ÖĞ¹ú´óÂ½£©'; })[0];
 speechSynthesis.speak(msg);
 ~~~
-speechSynthesis[æµè§ˆå™¨å…¼å®¹æ€§](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+speechSynthesis[ä¯ÀÀÆ÷¼æÈİĞÔ](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
 
-ä¹Ÿå¯ä»¥ç›´æ¥åœ¨æ§åˆ¶å°è¾“å…¥ä»¥ä¸‹ä»£ç è¿›è¡Œæ£€æµ‹
+Ò²¿ÉÒÔÖ±½ÓÔÚ¿ØÖÆÌ¨ÊäÈëÒÔÏÂ´úÂë½øĞĞ¼ì²â
 ~~~
 if ('speechSynthesis' in window){
-//å†…å®¹
+//ÄÚÈİ
 }
 ~~~
-å¯¹äºä¸æ”¯æŒçš„æµè§ˆå™¨ï¼Œå¯ä»¥ç”¨html5æ–°åŠ å…¥çš„audioæ ‡ç­¾ï¼Œå¦‚æœæµè§ˆå™¨ç‰ˆæœ¬æ¯”è¾ƒä½ï¼Œé‚£å°±åªèƒ½ç”¨flashå®ç°äº†ã€‚
+¶ÔÓÚ²»Ö§³ÖµÄä¯ÀÀÆ÷£¬¿ÉÒÔÓÃhtml5ĞÂ¼ÓÈëµÄaudio±êÇ©£¬Èç¹ûä¯ÀÀÆ÷°æ±¾±È½ÏµÍ£¬ÄÇ¾ÍÖ»ÄÜÓÃflashÊµÏÖÁË¡£
