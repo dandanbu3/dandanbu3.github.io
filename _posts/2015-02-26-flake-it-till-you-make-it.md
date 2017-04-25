@@ -1,14 +1,68 @@
----
+﻿---
 layout: post
 title: Flake it till you make it
 subtitle: Excerpt from Soulshaping by Jeff Brown
 bigimg: /img/path.jpg
 ---
 
-Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?  
+因为最近做了一个指引功能，然后发现一个比较有意思的东西，以直接通过js调用浏览器内置的speechSynthesis的对象实现语音输出，而不用依赖其他的音频文件。
 
-The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.  
+~~~
+var words = new SpeechSynthesisUtterance('Hello captain');
+window.speechSynthesis.speak(words);
+~~~
+通过新建一个SpeechSynthesisUtterance对象，再调用speechSynthesis方法，实现语音输出SpeechSynthesisUtterance对象内容。我在firefox和chrome浏览器下发现是有speechSynthesis对象的，但是IE暂不支持。通过修改SpeechSynthesisUtterance对象中的属性，可以修改语音的声音、发音速度，声调、语言等。
 
-At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.  
+|volume|声音|
+|rate|发音速度|
+|pitch|音调|
+|voice|声音|
+|language|[语言en,zh](http://www.mathguide.de/info/tools/languagecode.html)|
 
-A soulful notion of success rests on the actualization of our innate image. Success is simply the completion of a soul step, however unsightly it may be. We have finished what we started when the lesson is learned. What a fear-based culture calls a wonderful opportunity may be fruitless and misguided for the soul. Staying in a passionless relationship may satisfy our need for comfort, but it may stifle the soul. Becoming a famous lawyer is only worthwhile if the soul demands it. It is an essential failure if you are called to be a monastic this time around. If you need to explore and abandon ten careers in order to stretch your soul toward its innate image, then so be it. Flake it till you make it.
+
+~~~
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[10]; // 
+msg.voiceURI = 'native';
+msg.volume = 1; // 0 to 1
+msg.rate = 1; // 0.1 to 10
+msg.pitch = 2; //0 to 2
+msg.text = 'I am Stark';
+msg.lang = 'en';
+
+msg.onend = function(e) {
+  console.log('Finished in ' + event.elapsedTime + ' seconds.');
+};
+
+speechSynthesis.speak(msg);
+~~~
+#### 发音列表
+
+~~~
+speechSynthesis.getVoices().forEach(function(voice) {
+  console.log(voice.name, voice.default ? '(default)' :'');
+});
+
+~~~
+speechSynthesis.getVoices()可以得到可用语言发音数组，forEach方法对数组每一项进行迭代。
+可以得到一个列表。
+
+![grep](/img/chromeSpeech.png)
+
+知道这个列表我们就能用指定语言读取内容了
+
+~~~
+var msg = new SpeechSynthesisUtterance('你好');
+msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google 普通话（中国大陆）'; })[0];
+speechSynthesis.speak(msg);
+~~~
+speechSynthesis[浏览器兼容性](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+
+也可以直接在控制台输入以下代码进行检测
+~~~
+if ('speechSynthesis' in window){
+//内容
+}
+~~~
+对于不支持的浏览器，可以用html5新加入的audio标签，如果浏览器版本比较低，那就只能用flash实现了。
