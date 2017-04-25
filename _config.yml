@@ -25,8 +25,8 @@ description: A virtual proof that name is awesome!
 navbar-links:
   关于我: "aboutme"
   博客资源:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
+    - Beautiful Jekyll项目: "http://deanattali.com/beautiful-jekyll/"
+    - markdown学习: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
   原作者主页: "http://deanattali.com"
 
