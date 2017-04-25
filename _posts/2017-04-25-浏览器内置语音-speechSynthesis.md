@@ -1,9 +1,10 @@
 ﻿---
-layout: page
-title: 浏览器内置语音发音对象speechSynthesis
+layout: post
+title: Flake it till you make it
+subtitle: Excerpt from Soulshaping by Jeff Brown
+bigimg: /img/path.jpg
 ---
 
-### 浏览器内置发音speechSynthesis
 
 因为最近做了一个指引功能，然后发现一个比较有意思的东西，以直接通过js调用浏览器内置的speechSynthesis的对象实现语音输出，而不用依赖其他的音频文件。
 
