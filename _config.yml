@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: BLOG
+title: 博客
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -79,10 +79,10 @@ footer-links-active:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
-  google: false
-  linkedin: true
+  twitter: false
+  facebook: false
+  google: true
+  linkedin: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
