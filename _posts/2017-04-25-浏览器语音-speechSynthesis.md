@@ -1,8 +1,6 @@
 ---
 layout: post
-title: Flake it till you make it
-subtitle: Excerpt from Soulshaping by Jeff Brown
-bigimg: /img/path.jpg
+title: 内置浏览器语音speechSynthesis
 ---
 
 
@@ -49,7 +47,7 @@ speechSynthesis.getVoices().forEach(function(voice) {
 speechSynthesis.getVoices()可以得到可用语言发音数组，forEach方法对数组每一项进行迭代。
 可以得到一个列表。
 
-![grep](/img/chromeSpeech.png)
+![chrome](/img/chromeSpeech.png)
 
 知道这个列表我们就能用指定语言读取内容了
 
