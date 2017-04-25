@@ -1,7 +1,7 @@
-﻿--
-layout: post
+﻿---
+layout: page
 title: 浏览器内置语音发音对象speechSynthesis
---
+---
 
 ### 浏览器内置发音speechSynthesis
 
