@@ -4,7 +4,9 @@ title: 微信小程序开发总结
 ---
 
 微信小程序刚提出概念的几周，可以说是火了一把。刚出开发文档的时候，我也赶趟浏览了一下，然后找了个公共接口尝试做一个菜谱的微信小程序。
-
+~~~
+var ss=null;
+~~~
 首先，从[微信小程序官网](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)下载开发者工具，同时也能看到每次的更新日志。
 ！[版本](/img/wxaddress.png)
 因为小程序的样式用css，结构用html，逻辑用js实现，如果有前端基础，对一些小程序的API和组件可以比较快上手。我在[公共接口](http://www.tngou.net/doc)找了一个菜谱接口，因为和平常做项目的层级比较类似。
