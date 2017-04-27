@@ -3,4 +3,19 @@ layout: post
 title: 微信小程序开发总结
 ---
 
-微信小程序刚提出概念的几周，可以说是火了一把
+微信小程序刚提出概念的几周，可以说是火了一把。刚出开发文档的时候，我也赶趟浏览了一下，然后找了个公共接口尝试做一个菜谱的微信小程序。
+
+首先，从[微信小程序官网](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)下载开发者工具，同时也能看到每次的更新日志。
+！[版本](/img/wxaddress.png)
+因为小程序的样式用css，结构用html，逻辑用js实现，如果有前端基础，对一些小程序的API和组件可以比较快上手。我在[公共接口](http://www.tngou.net/doc)找了一个菜谱接口，因为和平常做项目的层级比较类似。
+[接口介绍](http://www.tngou.net/doc/cook/69)
+![接口](/img/caipuAPI.png)
+
+可以把接口分为三级，最高等级为菜谱分类接口=>分类id获取菜谱列表接口=>菜谱id获取菜谱详情，再制造一个根据菜名搜索菜谱的功能。
+小程序主体由三个文件组成：app.js,app.json,app.wxss。js存放小程序的逻辑，json存放小程序的一些配置，wxss是小程序的样式表。app.json配置比较重要，包括页面路径，窗口表现，底部bar等。
+#### 要注意：底部tabBar对应的页面不能用wx.navigateTo或者wx.redirectTo方法跳转，会不起作用，必须用wx.switchTab方法。
+
+![小程序页面](/img/xcxPage.png)
+
+[菜谱小程序源码](https://github.com/dandanbu3/cook)
+小程序的开发遵循前后端分离的原则，对一些熟悉react，flarum框架的人来说，还是很好上手的。
