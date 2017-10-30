@@ -54,7 +54,7 @@ String.fromCharCode(65)
 String.fromCharCode(128513)
 // 
 ~~~
-发现fromCharCode函数并不能识别，查阅MDN，fromCharCode函数并不能识别65535以上的数字，各浏览器有新的函数fromCodePoint可以识别65535之上编码的字符，
+发现fromCharCode函数并不能识别，查阅MDN，fromCharCode函数并不能识别65535以上的数字，各浏览器有新的函数fromCodePoint可以识别65535之上编码的字符
 
 ~~~
 String.fromCodePoint(128513)
