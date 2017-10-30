@@ -3,7 +3,7 @@ layout: post
 title: emoji与unicode编码
 ---
 
-我们在接触emoji之后，知道他们的编码unicode码一般在U1+0000至U1FFFFF之间。结合以前的charCodeAt方法，可以返回指定位置的字符的 Unicode 编码，这个返回值是 0 - 65535 之间的整数。
+我们在接触emoji之后，知道他们的编码unicode码一般在U1+0000至U1FFFFF之间。详细信息可以参考[Emoji Unicode Tables](https://apps.timwhitlock.info/emoji/tables/unicode#block-6a-additional-emoticons)。结合以前的charCodeAt方法，可以返回指定位置的字符的 Unicode 编码，这个返回值是 0 - 65535 之间的整数。
 
 ~~~
 ('😀').charCodeAt(0)
