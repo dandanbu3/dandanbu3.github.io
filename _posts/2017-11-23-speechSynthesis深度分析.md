@@ -21,3 +21,5 @@ speechSynthesis.getVoices()
 
 导航应用基于百度地图API，可以手动输入终点位置，通过百度地图API，获取当前位置的地理位置经纬度信息，生成一条规划路线，并在页面上显示出来。当定位监测到移动时，与规划路线的经纬度对比，并用speechSynthesis.speak()语音合成播放信息。
 ![map](/img/map.png)
+
+speechSynthesis.speak()除了可以识别文字外，emoji也能识别，比如👵会语音合成“老奶奶”，非常有意思。
