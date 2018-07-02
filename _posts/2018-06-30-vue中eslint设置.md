@@ -79,10 +79,9 @@ module.exports = {
 }
 ~~~
 
-root属性是说明此文件是eslint的根目录配置文件，一般情况下ESLINT会在所有父级目录查找配置文件，一直到根目录，设置root为“true”，它会停止在父级目录寻找。env属性是指eslint的运行环境，一般可以设置node或者brower。
+root属性是说明此文件是eslint的根目录配置文件，一般情况下ESLINT会在所有父级目录查找配置文件，一直到根目录，设置root为“true”，它会停止在父级目录寻找。parser属性是指eslint使用的脚本解析，默认使用esprima做脚本解析，当然也可以切换，在vue-cli中就切换成babel-eslint解析（需要npm安装）。parserOptions是javascript的语言选项，sourceType可以设置为"script"(默认)或"module"。env属性是指eslint的运行环境，一般可以设置node或者brower。plugins是配置的第三方插件，需要npm安装。rules属性则是我们在eslint中配置的需要检查的规则，其中的规则名对应的值："off"或0表示关闭规则，"warn"或1表示开启规则；并使用警告级别的错误warnning(这不会导致程序退出；"error"或2表示开启规则，并使用错误级别的错误error(当被触发的时候，程序会退出)。“space-before-function-paren”表示函数圆括号之前有一个空格的规则。“semi”表示每行结尾有分号。“arrow-parens”表示箭头函数参数有括号。“no-debugger”表示禁止使用debugger语句，其中有一个判断语句，表示在生产环境不能使用，开发环境可以使用debugger。“indent”表示缩进设置。
 
-
-安装eslint之后，需要在webpack下进行配置，没有引用的话也不会在项目内生效，vue项目的配置如下，对项目内的js或者vue文件使用eslint检查
+安装eslint之后，需要在webpack下进行配置，没有引用的话也不会在项目内生效，vue项目的配置如下，对项目内的js或者vue文件使用eslint检查。
 
 ~~~
 // webpack中rules配置
